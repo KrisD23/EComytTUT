@@ -1,4 +1,5 @@
 import 'package:e_comm_yt/components/watch_tile.dart';
+import 'package:e_comm_yt/models/watch.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
@@ -62,8 +63,18 @@ class _ShopPageState extends State<ShopPage> {
         ),
         Expanded(
           child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return WatchTile();
+              // Create a watch
+              Watch watch = Watch(
+                  name: "Watch 1",
+                  imagePath: 'lib/images/1.png',
+                  price: "21",
+                  description: "cool watch");
+              return WatchTile(
+                watch: watch,
+              );
             },
           ),
         )
