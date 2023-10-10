@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class WatchTile extends StatelessWidget {
   Watch watch;
-  WatchTile({super.key, required this.watch});
+  void Function()? onTap;
+  WatchTile({super.key, required this.watch, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,12 @@ class WatchTile extends StatelessWidget {
           ),
 
           // Watch description
-          Text(
-            watch.description,
-            style: TextStyle(color: Colors.grey),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              watch.description,
+              style: TextStyle(color: Colors.grey),
+            ),
           ),
 
           // pice + details
@@ -57,18 +61,21 @@ class WatchTile extends StatelessWidget {
                 ),
 
                 // plus button
-                Container(
-                    padding: EdgeInsets.all(28),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          bottomRight: Radius.circular(12)),
-                    ),
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                    ))
+                GestureDetector(
+                  onTap: onTap,
+                  child: Container(
+                      padding: const EdgeInsets.all(28),
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            bottomRight: Radius.circular(12)),
+                      ),
+                      child: const Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      )),
+                )
               ],
             ),
           )

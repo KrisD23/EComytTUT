@@ -12,6 +12,20 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  // add watch to cart
+  void addWatchToCart(Watch watch) {
+    Provider.of<Cart>(context, listen: false).addToCart(watch);
+
+    //alert user
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Added to cart'),
+        content: const Text('Item added to cart'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
@@ -75,6 +89,7 @@ class _ShopPageState extends State<ShopPage> {
                 // return the watch
                 return WatchTile(
                   watch: watch,
+                  onTap: () => addWatchToCart(watch),
                 );
               },
             ),
