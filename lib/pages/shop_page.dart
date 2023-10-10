@@ -77,7 +77,13 @@ class _ShopPageState extends State<ShopPage> {
               );
             },
           ),
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 25.0, left: 25.0, right: 25.0),
+          child: Divider(
+            color: Colors.grey.shade300,
+          ),
+        ),
       ],
     );
   }
