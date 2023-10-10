@@ -1,3 +1,4 @@
+import 'package:e_comm_yt/components/watch_tile.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
@@ -30,11 +31,42 @@ class _ShopPageState extends State<ShopPage> {
               ),
             ],
           ),
-        )
+        ),
 
         // message
-
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text("You can tell by the men who wear them."),
+        ),
         // hot pics
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                'Royal picks 🔥',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              ),
+              Text(
+                'See all',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return WatchTile();
+            },
+          ),
+        )
       ],
     );
   }
