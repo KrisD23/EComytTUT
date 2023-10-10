@@ -29,7 +29,7 @@ class WatchTile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
               watch.description,
-              style: TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
             ),
           ),
 
@@ -46,8 +46,8 @@ class WatchTile extends StatelessWidget {
                     // watch name
                     Text(
                       watch.name,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     const SizedBox(
                       height: 5,
@@ -55,7 +55,7 @@ class WatchTile extends StatelessWidget {
                     //price
                     Text(
                       '\$' + watch.price,
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     ),
                   ],
                 ),

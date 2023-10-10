@@ -19,9 +19,9 @@ class _ShopPageState extends State<ShopPage> {
     //alert user
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Added to cart'),
-        content: const Text('Item added to cart'),
+      builder: (context) => const AlertDialog(
+        title: Text('Added to cart'),
+        content: Text('Item added to cart'),
       ),
     );
   }
@@ -80,7 +80,7 @@ class _ShopPageState extends State<ShopPage> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 4,
+              itemCount: 5,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 // get a watch

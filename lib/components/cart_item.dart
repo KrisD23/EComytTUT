@@ -22,14 +22,14 @@ class _CartItemState extends State<CartItem> {
     return Container(
       decoration: BoxDecoration(
           color: Colors.grey, borderRadius: BorderRadius.circular(8)),
-      margin: EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       child: ListTile(
           leading: Image.asset(widget.watch.imagePath),
           title: Text(widget.watch.name),
           subtitle: Text('\$' + widget.watch.price),
           trailing: IconButton(
             onPressed: removeItemFromCart,
-            icon: Icon(Icons.delete),
+            icon: const Icon(Icons.delete),
           )),
     );
   }

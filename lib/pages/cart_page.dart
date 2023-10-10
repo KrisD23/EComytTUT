@@ -16,15 +16,15 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Consumer<Cart>(
       builder: (context, value, child) => Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25.0),
+        padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'My cart',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Expanded(
