@@ -1,16 +1,53 @@
-# e_comm_yt
+# Rolex Watch E-commerce App
 
-A new Flutter project.
+Welcome to the Rolex Watch E-commerce App, a Flutter project that allows users to browse and purchase Rolex watches. This app provides a simple and intuitive interface for users to explore Rolex watch products, add them to their cart, and view their selected items in the cart page.
+
+## Features
+
+1. **Browse Rolex Watches:** Explore a variety of Rolex watches available in the app. Each product is accompanied by detailed information, including images, prices, and descriptions.
+
+2. **Add to Cart:** Select your favorite Rolex watches and add them to your shopping cart with a simple tap. The app keeps track of the items you've added.
+
+3. **View Cart:** Navigate to the cart page to see an overview of all the Rolex watches you've added. Here, you can review your selections, remove items, or proceed to checkout.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Make sure you have Flutter and Dart installed on your machine. If not, you can follow the instructions on the [official Flutter website](https://flutter.dev/docs/get-started/install) to get started.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/KrisD23/SimpleWatchEcom_Flutter_Y
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd rolex-watch-ecommerce
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+### Run the App
+
+Run the app on an emulator or a connected device:
+
+```bash
+flutter run
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+Special thanks to the [Rolex](https://www.rolex.com/) brand for their iconic watches.
